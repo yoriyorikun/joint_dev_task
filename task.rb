@@ -114,7 +114,7 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-  
+  p data.dig(:user, :name)
 end
 
 def q13
@@ -122,6 +122,8 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
+  data_new = user_data.merge!(update_data)
+  p data_new
 
 end
 
