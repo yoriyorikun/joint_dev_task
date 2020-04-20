@@ -157,19 +157,9 @@ def q16
   ]
 
   # 以下に回答を記載
-  users1 = users[0]
-  users2 = users[1]
-  users3 = users[2]
-  users4 = users[3]
-
-  a = <<-TEXT
-  私の名前は#{users1[:name]}です。\n年齢は#{users1[:age]}歳です。
-  私の名前は#{users2[:name]}です。年齢は#{users2[:age]}歳です。
-  私の名前は#{users3[:name]}です。年齢は#{users3[:age]}歳です。
-  私の名前は#{users4[:name]}です。年齢は#{users4[:age]}歳です。
-  TEXT
-  p a
-  
+  users.each do |user|
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+  end
 end
 
 class UserQ17
