@@ -129,7 +129,8 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  data1 = data.keys
+  p data1
 end
 
 def q15
@@ -137,6 +138,13 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
+  data1.each do |data|
+    puts data.include?(:age) ? "OK" : "NG" 
+  end
+
+  data2.each do |data3|
+    puts data3.include?(:age) ? "OK" : "NG" 
+  end
 
 end
 
@@ -149,7 +157,19 @@ def q16
   ]
 
   # 以下に回答を記載
+  users1 = users[0]
+  users2 = users[1]
+  users3 = users[2]
+  users4 = users[3]
 
+  a = <<-TEXT
+  私の名前は#{users1[:name]}です。\n年齢は#{users1[:age]}歳です。
+  私の名前は#{users2[:name]}です。年齢は#{users2[:age]}歳です。
+  私の名前は#{users3[:name]}です。年齢は#{users3[:age]}歳です。
+  私の名前は#{users4[:name]}です。年齢は#{users4[:age]}歳です。
+  TEXT
+  p a
+  
 end
 
 class UserQ17
