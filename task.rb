@@ -30,9 +30,9 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  p sports.delete_if{|sport| sport == nil}
+  sports.delete_if{|sport| sport == nil}
   # 以下は変更しないで下さい
-  
+  p sports
 end
 
 def q5
@@ -67,9 +67,9 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages = programming_languages.map{|language| language.capitalize}
-  upper_case_programming_languages = %w(ruby php python javascript)
-  upper_case_programming_languages = upper_case_programming_languages.map{|upper| upper.upcase}
+  programming_languages = programming_languages.map(&:capitalize)
+  upper_case_programming_languages = programming_languages
+  upper_case_programming_languages = upper_case_programming_languages.map(&:upcase)
 
   # 以下は変更しないで下さい
   p programming_languages
@@ -90,11 +90,7 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  if foods.include?("うに")
-    p "好物です"
-  else
-    p "まぁまぁ好きです"
-  end
+ 
   
 end
 
