@@ -206,8 +206,7 @@ class UserQ18
       return "はいさいまいど〜，#{self.name}です！！！"
     end   
   end
-
-  u
+  
 end
 
 def q18
