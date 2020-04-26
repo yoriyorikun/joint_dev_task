@@ -197,9 +197,9 @@ class UserQ18
   end
 
   def introduce
-    if @age == 32
+    if @age >= 20
       return "こんにちは，#{@name}と申します。宜しくお願いいたします。"
-    elsif @age == 10
+    elsif @age <= 20
       return "はいさいまいど〜，#{@name}です！！！"
     end   
   end
