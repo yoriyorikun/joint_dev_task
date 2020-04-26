@@ -165,17 +165,16 @@ end
 class UserQ17
 
   # 以下に回答を記載
-  attr_accessor :name, :age, :gender
-  def initialize(name:, age:, gender:)
-    self.name = name
-    self.age = age
-    self.gender = gender
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
   end
 
   def info
-    puts "名前:#{self.name}"
-    puts "年齢:#{self.age}"
-    puts "性別:#{self.gender}"
+    puts "名前:#{@name}"
+    puts "年齢:#{@age}"
+    puts "性別:#{@gender}"
   end
 
 end
@@ -192,18 +191,16 @@ end
 
 class UserQ18
   # 以下に回答を記載
-
-  attr_accessor :name, :age
-  def initialize(name:, age:)
-    self.name = name
-    self.age = age
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
   end
 
   def introduce
-    if self.age == 32
-      return "こんにちは，#{self.name}と申します。宜しくお願いいたします。"
-    elsif self.age == 10
-      return "はいさいまいど〜，#{self.name}です！！！"
+    if @age == 32
+      return "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    elsif @age == 10
+      return "はいさいまいど〜，#{@name}です！！！"
     end   
   end
 
